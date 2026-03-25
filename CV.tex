@@ -17,6 +17,9 @@
 \input{glyphtounicode}
 \usepackage[sfdefault]{sourcesanspro}
 
+\newcommand{\nameSize}{\huge}
+\newcommand{\sectionSize}{\large}
+\newcommand{\bodySize}{\small}
 
 \pagestyle{empty}
 \urlstyle{same}
@@ -26,40 +29,39 @@
 \setlength{\parindent}{0pt}
 
 \titleformat{\section}
-  {\large\bfseries\raggedright}{}{0em}{}[\titlerule]
+  {\sectionSize\bfseries\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{6pt}{4pt}
 
 \pdfgentounicode=1
 
 % Custom commands
 \newlist{resumeList}{itemize}{1}
-\setlist[resumeList]{leftmargin=0.15in, label={}, itemsep=0pt, parsep=2pt, topsep=0pt}
+\setlist[resumeList]{leftmargin=0.15in, label={}, itemsep=3pt, parsep=2pt, topsep=0pt}
 
 \newlist{resumeSubList}{itemize}{1}
 \setlist[resumeSubList]{leftmargin=0.3in, label=$\cdot$, itemsep=2pt, parsep=0pt}
 
-\newcommand{\resumeItem}[1]{\item \small #1}
+\newcommand{\resumeItem}[1]{\item \bodySize #1}
 
 \newcommand{\resumeSubheading}[4]{
   \item
   \textbf{#1} \hfill #2\\
-  \textbf{\small #3} \hfill {\small #4}
+  \textbf{\bodySize #3} \hfill {\bodySize #4}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
   \item
-  \textbf{\small #1} \hfill {\small #2}
+  \textbf{\bodySize #1} \hfill {\bodySize #2}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-  \item \vspace{2pt}
-  {\small #1} \hfill #2
-}
+%\newcommand{\resumeProjectHeading}[2]{
+%  \item \vspace{2pt}
+%  {\bodySize #1} \hfill #2
+%}
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}}
+%\newcommand{\resumeSubItem}[1]{\resumeItem{#1}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\cdot$}}$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{resumeList}}
 \newcommand{\resumeSubHeadingListEnd}{\end{resumeList}}
 \newcommand{\resumeItemListStart}{\begin{resumeSubList}}
@@ -72,8 +74,8 @@
 \begin{document}
 
 \begin{center}
-    {\huge \bfseries Giacomo D'Angelo}\\
-    \small 3476873304 $-$ \small jacky\_1992@hotmail.it $-$ 
+    {\nameSize \bfseries Giacomo D'Angelo}\\
+    \bodySize 3476873304 \quad \bodySize jacky\_1992@hotmail.it \quad
     \href{https://www.linkedin.com/in/giacomo-d-angelo-57798493/}{\underline{LinkedIn}} 
 \end{center}
 
@@ -82,18 +84,21 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-  {Gruppo Iren}{Genova, IT}
-  {CRM Specialist - ICT Project Manager}{Genova, IT}
+  {Gruppo Iren}{Genova - Torino}
+  {ICT Manager CRM \& Integrazione}{2025 - Presente}
+\resumeItemListStart
+  \resumeItem{Da completare}
+\resumeItemListEnd
 \resumeSubSubheading
-  {CRM Specialist - ICT Project Manager}{Genova, IT}
+  {CRM Specialist - ICT Project Manager}{2020 -- 2025}
 \resumeItemListStart
   \resumeItem{Responsabile area CRM e integrazioni Extracommodity: gestisco con un collaboratore l'area CRM per tutte le progettualità al di fuori delle commodity, ovvero prodotti a efficientamento energetico, mobilità elettrica, connettività, polizze assicurative. Le tecnologie di mia competenza sono il CRM Salesforce (dedicato per l'area di business) e il middleware Mulesoft. Il team ha la responsabilità di coordinare cicli mensili e trimestrali di release per nuove iniziative, discutendo con il fornitore della soluzione tecnica e della stima economica}
   \resumeItem{IT Project Manager: mi occupo di coordinare team dedicati per la riuscita di iniziative aziendali. La mia responsabilità copre la scelta architetturale delle tecnologie, il coinvolgimento degli stakeholder e la riuscita nei tempi e costi prefissati del progetto}
 \resumeItemListEnd
 
 \resumeSubheading
-  {Axpo Italia}{2019 -- 2020}
-  {Functional Analyst}{Genova, IT}
+  {Axpo Italia}{Genova}
+  {Functional Analyst}{2019 -- 2020}
 \resumeItemListStart
   \resumeItem{Analista funzionale per i processi di vendita e post vendita dei clienti "large": traduzione di requisiti business in richieste al fornitore, discussione delle BBP per il compimento della trasformazione digitale}
   \resumeItem{Membro, rappresentante IT, del team di progetto per il lancio del brand 100\% digitale "Pulsee Luce \& Gas"}
@@ -101,18 +106,22 @@
 \resumeItemListEnd
 
 \resumeSubheading
-  {Accenture Technology Solution}{2015 -- 2019}
-  {Business \& Integration Arch Analyst}{Milano, IT}
+  {Accenture Technology Solution}{Milano}
+  {Business \& Integration Arch Analyst}{2017 -- 2019}
 \resumeItemListStart
-  \resumeItem{Cliente Axpo Italia: analista funzionale sul progetto di trasformazione digitale, focalizzato in ambito CRM Salesforce. Ho gestito per il cliente i rilasci di hotfix settimanali coordinando il team di sviluppo interno (giugno 2018 - aprile 2019)}
-  \resumeItem{Cliente Iren Mercato: analista funzionale su processi di post sales in ambito extra commodity su CRM Salesforce (luglio 2017 - giugno 2018)}
-  \resumeItem{Cliente ENI Gas \& Power: analista funzionale sui requisiti del data warehouse di Eni (settembre 2016 - luglio 2017)}
-  \resumeItem{Cliente ENI Middle: attività di backoffice e implementazioni procedure in PLSQL (maggio 2015 -settembre 2016)}
+  \resumeItem{Cliente Axpo Italia: analista funzionale sul progetto di trasformazione digitale, focalizzato in ambito CRM Salesforce. Ho gestito per il cliente i rilasci di hotfix settimanali coordinando il team di sviluppo interno}
+  \resumeItem{Cliente Iren Mercato: analista funzionale su processi di post sales in ambito extra commodity su CRM Salesforce}
+  \resumeItemListEnd
+  \resumeSubSubheading
+  {Application Development Associate}{2015 -- 2017}
+  \resumeItemListStart
+  \resumeItem{Cliente ENI Gas \& Power: analista funzionale sui requisiti del data warehouse di Eni}
+  \resumeItem{Cliente ENI Middle: attività di backoffice e implementazioni procedure in PLSQL}
 \resumeItemListEnd
 
 \resumeSubheading
-  {Intelligrate}{Ottobre 2014 -- Dicembre 2014}
-  {Tirocinante}{Genova, IT}
+  {Intelligrate}{Genova}
+  {Tirocinante}{10/2014 -- 12/2014}
 \resumeItemListStart
   \resumeItem{Stesura della tesi "Metodi di AdaBoost multivariato"}
 \resumeItemListEnd
@@ -123,7 +132,7 @@
 %\section{Progetti Rilevanti}
 %\resumeSubHeadingListStart
 %\resumeProjectHeading
-%    {\textbf{Multicompany} $|$ \emph{Presso Gruppo Iren}}{Luglio 2024 -- Presente}
+%  {\textbf{Multicompany} $|$ \emph{Presso Gruppo Iren}}{Luglio 2024 -- Presente}
 %\resumeItemListStart
 %  \resumeItem{Il progetto si pone l'obiettivo di abilitare alla vendita e alla gestione del cliente sulla filiera extracommodity le società di vendita Salerno Energia Vendita ed EGEA}
 %  \resumeItem{Il mio ruolo è quello di coordinare per il dipartimento ICT il progetto, curandone ogni aspetto e supervisionandone ogni fase}
@@ -143,14 +152,14 @@
 \section{Formazione}
 \resumeSubHeadingListStart
 \resumeSubheading
-  {Statistica matematica e trattamento informatico del dato}{Genova, IT}
+  {Statistica matematica e trattamento informatico del dato}{Genova}
   {Università degli studi di Genova}{2011 -- 2014}
 \resumeSubHeadingListEnd
 
 %-----------Lingue-----------
 \section{Lingue}
 \begin{resumeList}
-  \resumeItem{\textbf{Italiano}, madrelingua}
+  \resumeItem{\textbf{Italiano}, madrelingua}\\
   \resumeItem{\textbf{Inglese}, B2}
 \end{resumeList}
 
